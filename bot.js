@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame(` WallsMC .`,'https://www.twitch.tv/WallsMC');
+  client.user.setGame(` Play.WallsMC.net `,'https://www.twitch.tv/WallsMC');
   console.log('_______________________');
   console.log(' WallsMC Is Online Now ')
   console.log('_______________________')
