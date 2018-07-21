@@ -15,7 +15,7 @@ if(message.content.split(' ')[0] == '&bc') {
          message.react("✔️")
           let embed = new Discord.RichEmbed()
 if (message.content.startsWith(prefix + "cc")) {
-   if(!message.member.hasPermission('MANAGER_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحيه**');
+   if(!message.member.hasPermission('ADMINSTRATOR')) return message.reply('⚠ | **لا يوجد لديك صلاحيه**');
         var msg;
     .setColor("#FF00FF")
     .setThumbnail(message.author.avatarURL)   
