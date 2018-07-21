@@ -1,34 +1,32 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.on('ready', () => {
-  client.user.setGame(` WallsMC .`,'https://www.twitch.tv/WallsMC');
-  console.log('_______________________');
-  console.log(' WallsMC Is Online Now ')
-  console.log('_______________________')
-});
-client.on('message', message => {
-   let embed = new Discord.RichEmbed()
+var prefix = "&";
+client.on("message", message => {
 
-    let args = message.content.split(' ').slice(1).join(' ');
-     if(!message.channel.guild) return;
-if(message.content.split(' ')[0] == '&bc') {
-         message.react("✔️")
-          let embed = new Discord.RichEmbed()
-         
-   if(!message.member.hasPermission('MANAGER_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحيه**');
-        var msg;
-    .setColor("#FF00FF")
-    .setThumbnail(message.author.avatarURL)   
-                                      .addField('تم الارسال بواسطة :', "<@" + message.author.id + ">")
-                 message.channel.sendEmbed(embed);
-        message.guild.members.forEach(m => {
-            var bc = new Discord.RichEmbed()
-.addField('**● By  :**', `*** → ${message.author.username}#${message.author.discriminator}***`)
-            .addField('***● From Server  :***', `*** → ${message.guild.name}***`)               
-    .setColor('#ff0000')
-                 .addField('ّ', args)
-            m.send(``,{embed: bc});
-        });
-    }
+            if (message.content.startsWith(prefix + "bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' '); 
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {
+ m.send(`${argresult}\n ${m}`);
 })
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`); 
+ message.delete(); 
+};     
+});
+
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`RCSVE`);
+        console.log(`----------------`);
+      console.log(`Play.WallsMC.Net{client.guilds.size}`);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`Play.WallsMC.Net`,"http://twitch.tv/WallsMC")
+client.user.setStatus("dnd")
+});
+
+
+
 client.login("NDcwMjk3MjQwMzgwODk5MzI4.DjUOBQ.SOuwksme6bkyDxZruOkZl5Lce8A");
