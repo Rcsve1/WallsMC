@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame(` Play.WallsMC.net `,'https://www.twitch.tv/WallsMC');
+  client.user.setGame(`Play.WllasMc.Net`,'https://www.twitch.tv/WallsMC');
   console.log('_______________________');
   console.log(' WallsMC Is Online Now ')
   console.log('_______________________')
@@ -11,10 +11,12 @@ client.on('message', message => {
 
     let args = message.content.split(' ').slice(1).join(' ');
      if(!message.channel.guild) return;
-if(message.content.split(' ')[0] == '&bc') { 
+if(message.content.split(' ')[0] == '&bc') {
          message.react("✔️")
-         let embed = new Discord.RichEmbed( 
-          
+          let embed = new Discord.RichEmbed()
+if (message.content.startsWith(prefix + "cc")) {
+   if(!message.member.hasPermission('MANAGER_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحيه**');
+        var msg;
     .setColor("#FF00FF")
     .setThumbnail(message.author.avatarURL)   
                                       .addField('تم الارسال بواسطة :', "<@" + message.author.id + ">")
