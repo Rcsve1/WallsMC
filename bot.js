@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame(`Play.WllasMc.Net`,'https://www.twitch.tv/WallsMC');
+  client.user.setGame(` WallsMC .`,'https://www.twitch.tv/WallsMC');
   console.log('_______________________');
   console.log(' WallsMC Is Online Now ')
   console.log('_______________________')
@@ -14,8 +14,8 @@ client.on('message', message => {
 if(message.content.split(' ')[0] == '&bc') {
          message.react("✔️")
           let embed = new Discord.RichEmbed()
-if (message.content.startsWith(prefix + "cc")) {
-   if(!message.member.hasPermission('ADMINSTRATOR')) return message.reply('⚠ | **لا يوجد لديك صلاحيه**');
+         if (message.content.startsWith(prefix + "bc")) {
+   if(!message.member.hasPermission('MANAGER_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحيه**');
         var msg;
     .setColor("#FF00FF")
     .setThumbnail(message.author.avatarURL)   
