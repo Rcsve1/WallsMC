@@ -21,7 +21,7 @@ client.on('message', message => {
     .addField('User Activated', ${user} get rank ${act})
     .addField('By', <@${message.author.id}>)
     .setTimestamp()
-    .setFooter("609copyrights")
+    .setFooter("609 | copyrights")
   log.send({embed})
   message.channel.send({embed})
   user.addRole(${act})
