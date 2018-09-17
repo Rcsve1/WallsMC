@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 
 client.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find(●╠ 609 ╢ Member));
+member.addRole(member.guild.roles.find('●╠ 609 ╢ Member'));
 });
 
 client.login('NDkxMjYyMjk0MDEwMTAxNzYy.DoFTag.Ag6KU_rUA_BVyFFFRVE5Rhq8zd4');
