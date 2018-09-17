@@ -42,13 +42,4 @@ return;
   }
 });
 
-  client.on('guildMemberAdd', member => {
-  member.addRole('name', "• New")
-
-
-
-
-
-
-
 client.login('NDkxMjYyMjk0MDEwMTAxNzYy.DoFTag.Ag6KU_rUA_BVyFFFRVE5Rhq8zd4');
