@@ -7,48 +7,6 @@ client.on('ready', () => {
 });
 
 
-```js
-//welcome
-client.on('guildMemberAdd', member => {
-  if (member.bot) {
-    let guild = member.guild;
-    const embed = new Discord.RichEmbed()
-    .setColor('#01DFD7')
-    .setTimestamp()
-    .addField('Bot Joined',
-      `${member.user} Bot Joined. :wave:  `)
-    client.channels.find("name", "welcome").sendEmbed(embed); 
-  } else {
-
-  let guild = member.guild;
-  const embed = new Discord.RichEmbed()
-  .setColor(0xFF0000)
-  .setTimestamp()
-  .addField('Member Joined',
-    `${member.user} has joined! Welcome To ${guild.name} ! `)
-  client.channels.find("name", "welcome").sendEmbed(embed); 
-}
-})
-client.on('guildMemberRemove', member => {
-  if (member.bot) {
-    let guild = member.guild;
-    const embed = new Discord.RichEmbed()
-    .setColor(0xFF0000)
-    .setTimestamp()
-    .addField('Bot Leave',
-      `${member.user} Bot leave. :wave: !`)
-    client.channels.find("name", "welcome").sendEmbed(embed); 
-  } else {
-
-  let guild = member.guild;
-  const embed = new Discord.RichEmbed()
-  .setColor(0xFF0000)
-  .setTimestamp()
-  .addField('Member Leave',
-    `${member.user} has leave :wave: !`)
-  client.channels.find("name", "welcome").sendEmbed(embed); 
-}
-});
 
 client.on('message', message => {
  if (message.author.id === client.user.id) return;
