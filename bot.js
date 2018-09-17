@@ -6,9 +6,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-  client.on('guildMemberAdd', member => {
-  member.addRole('name', "• New")
-});
 
 client.on('guildMemberAdd', (member) => {
 member.addRole(member.guild.roles.find(●╠ 609 ╢ Member));
