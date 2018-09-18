@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("●╠ 609 ╢ Member", "●╠ 609 ╢ Member");
+   var role = member.guild.roles.find ("●╠ 609 ╢ Member");
    member.addRole (role);
   
 })
