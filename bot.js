@@ -32,7 +32,7 @@ client.on('message',async message => {
       console.log(`Voice online channel setup for guild: \n ${message.guild.name}`);
       c.overwritePermissions(message.guild.id, {
         CONNECT: false,
-        SPEAK: false
+        SPEAK: false h
       });
       setInterval(function() {
         c.setName(`Voice Online : [ ${message.guild.members.filter(m => m.voiceChannel).size} ]`)
