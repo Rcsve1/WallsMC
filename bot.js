@@ -54,7 +54,7 @@ client.on('message',async message => {
       });
       setInterval(function() {
         c.setName(`Members Count : [ ${message.guild.members.size} ]`)
-      },1000);
+      },1000);gg
     });
     }
   });
